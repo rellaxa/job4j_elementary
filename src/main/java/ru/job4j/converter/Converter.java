@@ -31,24 +31,24 @@ public class Converter {
         float expEuro = 15;
         float outRubToEur = Converter.rubleToEuro(inRubToEur);
         boolean passEuro = expEuro == outRubToEur;
-        System.out.println("1500 rubles are 15. Test result : " + passEuro);
+        System.out.println("1500 rubles are 15 euro. Test result : " + passEuro);
 
         float inRubToDol = 1500;
         float expDol = 15.957447f;
         float outRubToDol = Converter.rubleToDollar(inRubToDol);
         boolean passDol = expDol == outRubToDol;
-        System.out.println("1500 rubles are 15.957447f. Test result : " + passDol);
+        System.out.println("1500 rubles are 15.957447f dollars. Test result : " + passDol);
 
         float inDolToEuro = 300;
         expEuro = 282;
         float outDolToEuro = Converter.dollarToEuro(inDolToEuro);
         passDol = expEuro == outDolToEuro;
-        System.out.println("300 dollars are 282. Test result : " + passDol);
+        System.out.println("300 dollars are 282 euro. Test result : " + passDol);
 
         float inEuroToDol = 300;
         expDol = 317.99997f;
         float outEuroToDol = Converter.euroToDollar(inEuroToDol);
         passEuro = expDol == outEuroToDol;
-        System.out.println("300 dollars are 317.99997. Test result : " + passEuro);
+        System.out.println("300 euro are 317.99997 dollars. Test result : " + passEuro);
     }
 }
