@@ -20,11 +20,35 @@ public class Converter {
     public static void main(String[] args) {
         float euro = Converter.rubleToEuro(1500);
         System.out.println("1500 rubles = " + euro + " euro");
-        euro = Converter.dollarToEuro(300);
-        System.out.println("300 dollars = " + euro + " euro");
         float dollar = Converter.rubleToDollar(1500);
         System.out.println("1500 rubles = " + dollar + " dollars");
-        dollar = Converter.euroToDollar(450);
-        System.out.println("450 euro = " + dollar + " dollars");
+        euro = Converter.dollarToEuro(300);
+        System.out.println("300 dollars = " + euro + " euro");
+        dollar = Converter.euroToDollar(300);
+        System.out.println("300 euro = " + dollar + " dollars");
+
+        float inRubToEur = 1500;
+        float expEuro = 15;
+        float outRubToEur = Converter.rubleToEuro(inRubToEur);
+        boolean passEuro = expEuro == outRubToEur;
+        System.out.println("1500 rubles are 15. Test result : " + passEuro);
+
+        float inRubToDol = 1500;
+        float expDol = 15.957447f;
+        float outRubToDol = Converter.rubleToDollar(inRubToDol);
+        boolean passDol = expDol == outRubToDol;
+        System.out.println("1500 rubles are 15.957447f. Test result : " + passDol);
+
+        float inDolToEuro = 300;
+        expEuro = 282;
+        float outDolToEuro = Converter.dollarToEuro(inDolToEuro);
+        passDol = expEuro == outDolToEuro;
+        System.out.println("300 dollars are 282. Test result : " + passDol);
+
+        float inEuroToDol = 300;
+        expDol = 317.99997f;
+        float outEuroToDol = Converter.euroToDollar(inEuroToDol);
+        passEuro = expDol == outEuroToDol;
+        System.out.println("300 dollars are 317.99997. Test result : " + passEuro);
     }
 }
