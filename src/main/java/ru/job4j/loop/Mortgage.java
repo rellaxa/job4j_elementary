@@ -10,8 +10,4 @@ public class Mortgage {
         }
         return year;
     }
-
-    public static void main(String[] args) {
-        System.out.println(year(200, 70, 50));
-    }
 }
