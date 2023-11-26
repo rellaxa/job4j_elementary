@@ -11,17 +11,4 @@ public class SkipNegative {
         }
         return array;
     }
-
-    public static void main(String[] args) {
-        int[][] rsl = {
-                {1, -2},
-                {1, 2}
-        };
-        int[][] test = skip(rsl);
-        for (int[] ints : test) {
-            for (int val : ints) {
-                System.out.println(val);
-            }
-        }
-    }
 }
