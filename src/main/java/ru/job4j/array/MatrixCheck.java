@@ -12,18 +12,29 @@ public class MatrixCheck {
         return result;
     }
 
+    public static boolean monoVertical(char[][] board, int column) {
+        boolean result = true;
+        for (int row = 0; row < board.length; row++) {
+            if (board[row][column] != 'X') {
+                result = false;
+                break;
+            }
+        }
+        return result;
+    }
+
     public static void main(String[] args) {
-        boolean array = monoHorizontal(new char[][]{
-                {' ', ' ', ' '},
+        boolean array = monoVertical(new char[][]{
+                {'X', ' ', ' '},
                 {'X', 'X', 'X'},
-                {' ', ' ', ' '},
-        }, 1);
+                {'X', ' ', ' '},
+        }, 0);
         System.out.println(array);
-        array = monoHorizontal(new char[][]{
+        array = monoVertical(new char[][]{
                 {' ', ' ', ' '},
                 {'X', 'X', 'X'},
                 {'X', 'X', ' '},
-        }, 2);
+        }, 1);
         System.out.println(array);
     }
 }
