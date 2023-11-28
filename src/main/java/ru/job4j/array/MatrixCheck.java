@@ -31,24 +31,25 @@ public class MatrixCheck {
         return rsl;
     }
 
+    public static boolean isWin(char[][] board) {
+        boolean result = false;
+        for (int row = 0; row < board.length; row++) {
+            if (board[row][row] == 'X' && (monoHorizontal(board, row) || monoVertical(board, row))) {
+                result = true;
+                break;
+            }
+        }
+        return result;
+    }
+
     public static void main(String[] args) {
-        boolean array = monoHorizontal(new char[][]{
-                {'X', ' ', ' '},
-                {'X', 'X', 'X'},
-                {'X', ' ', ' '},
-        }, 1);
-        System.out.println(array);
-        array = monoVertical(new char[][]{
-                {' ', 'X', ' '},
-                {'X', 'X', 'X'},
-                {'X', 'X', ' '},
-        }, 1);
-        System.out.println(array);
-        char[] test = extractDiagonal(new char[][] {
-                {'X', ' ', ' '},
-                {' ', 'Y', ' '},
-                {' ', ' ', 'Z'},
+        boolean array = isWin(new char[][] {
+                {' ', ' ', ' ', ' ', ' '},
+                {' ', ' ', ' ', ' ', ' '},
+                {' ', ' ', ' ', ' ', ' '},
+                {'X', 'X', 'X', 'X', 'X'},
+                {' ', ' ', ' ', ' ', ' '},
         });
-        System.out.println(test);
+        System.out.println(array);
     }
 }
