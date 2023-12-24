@@ -6,12 +6,19 @@ public class Max {
         return result;
     }
 
+    public static int max(int first, int second, int third) {
+        return max(first,
+                max(second, third));
+    }
+
+    public static int max(int first, int second, int third, int forth) {
+        return max(first,
+                max(second, third, forth));
+    }
+
     public static void main(String[] args) {
-        int rsl = max(1, 2);
-        System.out.println(rsl);
-        rsl = max(10, 3);
-        System.out.println(rsl);
-        rsl = max(999, 999);
-        System.out.println(rsl);
+        System.out.println(max(1, 2));
+        System.out.println(max(2, 4, 8));
+        System.out.println(max(3, 6, 12, 24));
     }
 }
