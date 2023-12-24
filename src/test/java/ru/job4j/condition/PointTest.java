@@ -1,5 +1,7 @@
 package ru.job4j.condition;
 
+import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.*;
 
@@ -30,5 +32,23 @@ class PointTest {
         double out = first.distance(second);
         double expected = 668.17;
         assertThat(out).isEqualTo(expected, withPrecision(0.01));
+    }
+
+    @Test
+    public void when024To3612Then9dot43() {
+        Point first = new Point(0, 2, 4);
+        Point second = new Point(3, 6, 12);
+        double out = first.distance3d(second);
+        double expected = 9.43;
+        Assertions.assertEquals(out, expected, 0.01);
+    }
+
+    @Test
+    public void when554322To3854Then9dot43() {
+        Point first = new Point(55, 43, 22);
+        Point second = new Point(3, 8, 54);
+        double out = first.distance3d(second);
+        double expected = 70.37;
+        Assertions.assertEquals(out, expected, 0.01);
     }
 }
